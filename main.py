@@ -13,25 +13,26 @@ colorama.init(autoreset=True)
 bot = None
 selected_guilds = []
 
-NEBULA_ASCII = """
-                                                 
-                                                                            
-                                                                            
-     ,,,,,E#t                             ,;                         E#Wi        
-     E##t     t   j.               f#i.          t   j.         E###G.      
-     E#W#t    Ej  EW,            .E#t Ef.        Ej  EW,        E#fD#W;     
-     E#tfL.   E#, E##j          i#W,  E#Wi       E#, E##j       E#t t##L    
-     E#t      E#t E###D.       L#D.   E#K#D:     E#t E###D.     E#t  .E#K,  
-  ,ffW#Dffj.  E#t E#jG#W;    :K#Wfff; E#t,E#f.   E#t E#jG#W;    E#t    j##f 
-   ;LW#ELLLf. E#t E#t t##f   i##WLLLLtE#WEE##Wt  E#t E#t t##f   E#t    :E#K:
-     E#t      E#t E#t  :K#E:  .E#L    E##Ei;;;;. E#t E#t  :K#E: E#t   t##L  
-     E#t      E#t E#KDDDD###i   f#E:  E#DWWt     E#t E#KDDDD###iE#t .D#W;   
-     E#t      E#t E#f,t#Wi,,,    ,WW; E#t f#K;   E#t E#f,t#Wi,,,E#tiW#G.    
-     E#t      E#t E#t  ;#W:       .D#;E#Dfff##E, E#t E#t  ;#W:  E#K##i      
-     E#t      E#t DWi   ,KK:        ttjLLLLLLLLL;E#t DWi   ,KK: E##D.       
-     ;#t                                                        E#t         
-                                                                L:                                                                                                                                        
-                                                                 
+NEBULA_ASCII = """                                                                        
+                                                              
+                                                              
+BBBBBBBBBBBBBBBBB           GGGGGGGGGGGGG        CCCCCCCCCCCCC
+B::::::::::::::::B       GGG::::::::::::G     CCC::::::::::::C
+B::::::BBBBBB:::::B    GG:::::::::::::::G   CC:::::::::::::::C
+BB:::::B     B:::::B  G:::::GGGGGGGG::::G  C:::::CCCCCCCC::::C
+  B::::B     B:::::B G:::::G       GGGGGG C:::::C       CCCCCC
+  B::::B     B:::::BG:::::G              C:::::C              
+  B::::BBBBBB:::::B G:::::G              C:::::C              
+  B:::::::::::::BB  G:::::G    GGGGGGGGGGC:::::C              
+  B::::BBBBBB:::::B G:::::G    G::::::::GC:::::C              
+  B::::B     B:::::BG:::::G    GGGGG::::GC:::::C              
+  B::::B     B:::::BG:::::G        G::::GC:::::C              
+  B::::B     B:::::B G:::::G       G::::G C:::::C       CCCCCC
+BB:::::BBBBBB::::::B  G:::::GGGGGGGG::::G  C:::::CCCCCCCC::::C
+B:::::::::::::::::B    GG:::::::::::::::G   CC:::::::::::::::C
+B::::::::::::::::B       GGG::::::GGG:::G     CCC::::::::::::C
+BBBBBBBBBBBBBBBBB           GGGGGG   GGGG        CCCCCCCCCCCCC                                                          
+                                                                                                                       
 
 """
 
@@ -89,7 +90,7 @@ async def delete_all_roles_except_bot(guild):
         except:
             pass
 
-async def create_channels(guild, count=50, name="firebird-on-top"):
+async def create_channels(guild, count=50, name="bgc-on-top"):
     everyone = guild.default_role
     for _ in range(count):
         try:
@@ -137,8 +138,8 @@ async def full_nuke(guild):
     ch_count = int((await ainput("   Channels to create > ")) or "50")
     msg_count = int((await ainput("   Messages per channel > ")) or "75")
     spam_msg = (await ainput("   Spam message > ")) or "@everyone nuked"
-    dm_msg = (await ainput("   DM message to everyone > ")) or "Firebird dsc.gg/nebula420"
-    new_name = (await ainput("   New server name > ")) or "Firebird on Top"
+    dm_msg = (await ainput("   DM message to everyone > ")) or "gbc https://github.com/nicopancakes/bgc"
+    new_name = (await ainput("   New server name > ")) or "bgc on Top"
     ban = (await ainput("   Ban everyone? (y/n) > ")).lower().startswith('y')
 
     await delete_all_channels(guild)
@@ -226,7 +227,7 @@ async def simple_raid(guild):
 async def main_menu(guilds):
     while True:
         clear()
-        cprint(NEBULA_ASCII.strip(), Fore.RED)
+        cprint(NEBULA_ASCII.strip(), Fore.CYAN)
 
         print("")
         cprint("1 > Nuke", Fore.WHITE)
@@ -263,9 +264,9 @@ async def main_menu(guilds):
 
 if __name__ == "__main__":
     clear()
-    cprint(NEBULA_ASCII.strip(), Fore.RED)
+    cprint(NEBULA_ASCII.strip(), Fore.CYAN)
 
-    cprint("\nFirebird Client v1.2.0 : github.com/nicopancakes/firebird \n", Fore.RED)
+    cprint("\nBlue Gauge Client ver2.0 : github.com/nicopancakes/bgc \n", Fore.CYAN)
 
     token = input(Fore.WHITE + "Application TOKEN > ").strip()
 
@@ -299,7 +300,7 @@ if __name__ == "__main__":
             selected_guilds = []
 
         if not selected_guilds:
-            cprint("[?] No valid servers selected.", Fore.RED)
+            cprint("? No valid servers selected.", Fore.RED)
             return
 
         cprint(f"[+] Selected {len(selected_guilds)} server(s)", Fore.WHITE)
