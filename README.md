@@ -1,8 +1,8 @@
-# Firebird-Client
-Firebird Client, Formally 'Nebula'.
+# BGC
+Blue Gauge Client, Formally 'Firebird'.
 
 
-## Firebird is a Discord Nuker Tool Made with Python.
+## BGC is a Discord Nuker Tool Made with Python.
 
 <img width="499" height="405" alt="image" src="https://github.com/user-attachments/assets/2910a631-46d9-427c-93a4-43a1d722b7f9" />
 
